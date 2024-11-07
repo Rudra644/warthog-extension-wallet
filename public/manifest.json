@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Warthog Wallet",
+  "version": "1.0",
+  "description": "A wallet extension built with React and Vite.",
+  "action": {
+    "default_popup": "src/pages/Popup/index.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "chrome_url_overrides": {
+    "newtab": "src/pages/Welcome/index.html"
+  },
+  "permissions": ["storage", "tabs", "webNavigation"],
+  "icons": {
+    "48": "icon-48.png",
+    "128": "icon-128.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["src/pages/Welcome/index.html"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
