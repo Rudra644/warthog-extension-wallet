@@ -7,20 +7,27 @@
     "default_popup": "src/pages/Popup/index.html"
   },
   "background": {
-    "service_worker": "background.js"
+    "service_worker": "background.js",
+    "type": "module"
   },
   "chrome_url_overrides": {
     "newtab": "src/pages/Welcome/index.html"
   },
-  "permissions": ["storage", "tabs", "webNavigation"],
+  "permissions": ["storage", "tabs", "scripting", "webNavigation"],
+  "host_permissions": [
+  "http://127.0.0.1/*"
+  ],
   "icons": {
     "48": "icon-48.png",
     "128": "icon-128.png"
   },
   "web_accessible_resources": [
     {
-      "resources": ["src/pages/Welcome/index.html"],
-      "matches": ["<all_urls>"]
+      "resources": [
+      "src/pages/Welcome/index.html",
+      "background.js"
+      ],
+      "matches": ["<all_urls>", "chrome-extension://*/*"]
     }
   ]
 }

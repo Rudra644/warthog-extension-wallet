@@ -1,0 +1,198 @@
+/* Create.css */
+
+.create-container {
+  display: flex;
+  min-height: 100vh;
+  color: white;
+  background-color: #1a1a1a;
+}
+
+.create-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 6rem;
+  text-align: left;
+}
+
+.create-right {
+  display: none;
+  background-color: #0c0c0f;
+}
+
+@media (min-width: 1024px) {
+  .create-right {
+    display: flex;
+    width: 30%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    text-align: center;
+  }
+}
+
+.top-flare {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 150px;
+  background: linear-gradient(180deg, #e4a613, transparent);
+  opacity: 0.25;
+}
+
+.carousel-dots {
+  display: flex;
+  gap: 0.5rem;
+  margin-left: 1rem;
+}
+
+.dot {
+  height: 0.5rem;
+  width: 0.5rem;
+  background-color: #6b7280;
+  border-radius: 50%;
+}
+
+.dot.active {
+  background-color: #e4a613;
+}
+
+.create-heading {
+  font-size: 2.7rem;
+  font-weight: bold;
+  margin-left: 1rem;
+}
+
+.create-subtitle {
+  font-size: 1.125rem;
+  color: #d1d5db;
+  max-width: 35rem;
+  margin: 0.75rem 0 2rem 1rem;
+}
+
+.create-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin-left: 1rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #4b5563;
+  background-color: #2d2d2d;
+  color: white;
+}
+
+.form-group input::placeholder {
+  color: #9ca3af;
+}
+
+.error-message {
+  color: #f87171;
+  font-size: 0.875rem;
+  margin-top: -1rem;
+  margin-bottom: 1rem;
+}
+
+.submit-button {
+  width: 106.75%; /* Match button width to form fields */
+  padding: 0.75rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  background-color: #e4a613;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #d9a209;
+}
+
+.create-image {
+  max-width: 100%;
+  max-height: 17.5rem;
+  margin-bottom: 1rem;
+}
+
+.create-footer {
+  color: #9ca3af;
+  font-size: 1.25rem;
+  max-width: 24rem;
+  text-align: center;
+}
+
+/* Success Screen Styles */
+.success-heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #ffffff;
+  margin-left: 1rem;
+}
+
+.success-message {
+  font-size: 1.25rem;
+  color: #d1d5db;
+  margin-bottom: 2rem;
+  max-width: 500px;
+  margin-left: 1rem;
+}
+
+/* Social Cards for Follow/Join */
+.social-cards {
+  display: flex;
+  gap: 1rem;
+  margin-top: 3.25rem;
+  margin-left: 1rem;
+}
+
+.social-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 280px;
+  height: 150px;
+  background-color: #2d2d2d;
+  color: white;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-align: center;
+}
+
+.social-card:hover {
+  background-color: #3a3a3a;
+}
+
+.social-icon {
+  font-size: 3.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.social-card:nth-child(1) .social-icon {
+  color: #1DA1F2; /* Twitter brand color */
+}
+
+.social-card:nth-child(2) .social-icon {
+  color: #5865F2; /* Discord brand color */
+}

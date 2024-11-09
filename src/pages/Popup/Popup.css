@@ -2,77 +2,169 @@
 
 /* Reset some basic styles */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  .popup-container {
-    width: 300px;
-    height: 600px;
-    display: flex;
-    flex-direction: column;
-    background-color: #1a1a1a;
-    color: white;
-    border-radius: 8px;
-    overflow: hidden;
-  }
-  
-  /* Header Section */
-  .popup-header {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
-    background-color: #0d0d0d;
-  }
-  
-  .header-left, .header-right {
-    display: flex;
-    gap: 10px;
-  }
-  
-  .icon-btn {
-    display: flex;
-    align-items: center;
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
-  }
-  
-  .status-indicator {
-    width: 8px;
-    height: 8px;
-    background-color: green;
-    border-radius: 50%;
-    margin-left: 5px;
-  }
-  
-  /* Content Section */
-  .popup-content {
-    flex: 1;
-    padding: 20px;
-    overflow-y: auto;
-  }
-  
-  /* Navigation Section */
-  .popup-nav {
-    display: flex;
-    justify-content: space-around;
-    background-color: #0d0d0d;
-    padding: 10px 0;
-  }
-  
-  .tab-button {
-    background: none;
-    border: none;
-    color: gray;
-    cursor: pointer;
-    font-size: 16px;
-  }
-  
-  .tab-button.active {
-    color: white;
-    font-weight: bold;
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.popup-container {
+  min-width: 350px;
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  background-color: #1a1a1a;
+  color: white;
+  overflow: hidden;
+  border-radius: 0; /* Remove rounded edges */
+}
+
+/* Header Section */
+.popup-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #0d0d0d;
+}
+
+.header-left, .header-right {
+  display: flex;
+  gap: 10px;
+}
+
+.icon-btn {
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.status-indicator {
+  width: 8px;
+  height: 8px;
+  background-color: green;
+  border-radius: 50%;
+  margin-left: 5px;
+}
+
+/* Content Section */
+.popup-content {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+/* Navigation Section */
+.popup-nav {
+  display: flex;
+  justify-content: space-around;
+  background-color: #0d0d0d;
+  padding: 10px 0;
+}
+
+.tab-button {
+  background: none;
+  border: none;
+  color: gray;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.tab-button.active {
+  color: white;
+  font-weight: bold;
+}
+
+/* Loading Screen */
+.loading-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+  font-size: 1.1rem;
+}
+
+.loading-screen h1 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.loading-screen p {
+  color: #cccccc;
+}
+
+/* Welcome Screen */
+.welcome-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+  font-size: 1.1rem;
+}
+
+.welcome-screen h1 {
+  font-size: 1.5rem;
+}
+
+.welcome-screen p {
+  padding: 1rem;
+  color: #cccccc;
+  margin-bottom: 1rem;
+}
+
+.welcome-screen button {
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  color: #ffffff;
+  background-color: #e4a613;
+  border: none;
+  border-radius: 8px; /* Rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.welcome-screen button:hover {
+  background-color: #d49c0d;
+  transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+/* Success Message */
+.success-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.success-message h1 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.success-message p {
+  font-size: 1rem;
+  color: #d1d5db;
+  margin-bottom: 1.5rem;
+}
+
+.acknowledge-button {
+  padding: 0.6rem 1.2rem;
+  font-size: 0.875rem;
+  background-color: #e4a613;
+  color: white;
+  border: none;
+  border-radius: 8px; /* Rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.acknowledge-button:hover {
+  background-color: #d49c0d;
+  transform: translateY(-2px);
+}
